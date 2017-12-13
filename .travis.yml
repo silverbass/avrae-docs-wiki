@@ -1,0 +1,15 @@
+script:
+- |
+  git config user.name "mommothazaz123"
+  git config user.email "mommothazaz123@gmail.com"
+  git remote remove origin
+  git remote add origin https://$GITHUB_API_KEY@github.com/mommothazaz123/avrae-docs-wiki.git > /dev/null 2>&1
+  git remote add upstream https://$GITHUB_API_KEY@github.com/mommothazaz123/avrae-docs.wiki.git > /dev/null 2>&1
+  git fetch origin
+  git fetch upstream
+  git merge upstream/master --no-edit
+  git push origin HEAD:master > /dev/null 2>&1
+  git push upstream HEAD:master > /dev/null 2>&1
+env:
+  matrix:
+    secure: psdkEvFw35Hnnnl8pqUR5ebG3TJsZKHJEkP0oVO3N0k/eRNjf77hejt5GuALn6pYCfU7hLsfjieKSoKfY50rBxSKbbIqRjX3Fxckfjt8BOOhkVVY7pnvNEYULWkGYO3Zx4153eKQ0mQMBmGSakY92AGKVYWp5bdy7EDyo1cR7LS2SIlp8m+xpxkA1Q690zsX1lz7rYpNwXwdhOTFSnSmTWmGqZOzYbQ2CEKg6LtEC44i3sEOwdLw7kASQEhpP2WGiOX+Pfudvn/ne8k5hsV+U2QzfprYa4MSvn9kyTRDBlkXRBRaZmxQnc8A8syZOjnS9cvKjswBOAHlUN0Orw7BrlUqjUl0drEc5M3XTZ8fGwE/ksqFM7MlKKUBu5Vo29GSvEdga/YyZW1DksbA79Z2p8WreNv8h+egWnLN36m2vIuvHtKbBUw6cDLx9LWX+ocSkiIoUEXCXkhsqM+O/sPGU2KvmtwaI/E3B3KhljZsmAyZTtEehkz8M6ap2Gl16zNjAyiCNb4EPJ+cUgOcTZRhjeml9vN0ddlonAdBKij+TZ6S+IJwuJ3YQK7NgnOWksFxZd6kaHZ0PO3XXUTsLfwMu9rBm/HiZvEBEBbWFzjSvXKV6l45nH6q4PsOALVvZer0zpFOIyV/tqHM81Yyr2KYC1XFyp/ub7pTwzU9qCtMNiU=
