@@ -32,7 +32,7 @@ Modify your character sheet to have a +1 bonus to AC if they are wearing armor.
 
 #### Great Weapon Fighting
 Modify your character sheet to such that the damage dice uses the ``ro1ro2`` tag.  
-*Example* ``1d12ro1ro2 + 4 [slashing]``
+*Example:* ``1d12ro1ro2 + 4 [slashing]``
 
 #### Protection
 ```
